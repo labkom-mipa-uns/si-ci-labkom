@@ -37,6 +37,16 @@
              </a>
          </li>
 
+
+         <li class="nav-item bg-blue">
+             <a href="<?php echo base_url()?>C_Mhs" class="nav-link" >
+              <i class="nav-icon fa fa-bullhorn"></i>
+               <p>
+                 Daftar Mahasiswa
+               </p>
+             </a>
+         </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
