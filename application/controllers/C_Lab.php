@@ -19,7 +19,7 @@ class C_Lab extends CI_Controller {
 
         $data = array(
 
-            'nama_lab'         => $nama_lab,
+            'nama_lab' => $nama_lab,
         );
 
         $this->M_Lab->insert_entry($data);

@@ -29,10 +29,10 @@
        
 
         <li class="nav-item bg-blue">
-             <a href="<?php echo base_url()?>C_pinjamRuang" class="nav-link" >
+             <a href="<?php echo base_url()?>C_Alat" class="nav-link" >
               <i class="nav-icon fa fa-bullhorn"></i>
                <p>
-                 Peminjaman Lab
+                 Daftar Alat
                </p>
              </a>
          </li>
