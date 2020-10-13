@@ -37,7 +37,7 @@
 
         <?php foreach ($lab  as $row) : ?>
         <tr>
-            <td><?php echo "LAB".$row['id_lab'] ?></td>
+            <td><?php echo $row['id_lab'] ?></td>
             <td><?php echo $row['nama_lab'] ?></td>
             <td>
                 <?php echo anchor('C_Lab/delete_entry/'.$row['id_lab'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
@@ -65,6 +65,11 @@
       <div class="modal-body">
       <form method="post" action="<?php echo base_url().'C_Lab/insert_entry'; ?>">
         
+        
+        <div class="form-group">
+            <label > ID Lab</label>
+            <input type="text" name="id_lab" class="form-control">
+        </div>
 
         <div class="form-group">
             <label > Nama Lab</label>

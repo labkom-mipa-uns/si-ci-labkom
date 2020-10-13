@@ -15,11 +15,13 @@ class C_Lab extends CI_Controller {
     }
 
     public function insert_entry(){
+        $id_lab = $this->input->post('id_lab');
         $nama_lab = $this->input->post('nama_lab');
 
         $data = array(
 
             'nama_lab' => $nama_lab,
+            'id_lab' => $id_lab,
         );
 
         $this->M_Lab->insert_entry($data);

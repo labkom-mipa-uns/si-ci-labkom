@@ -28,7 +28,7 @@
                         <input type="hidden" name="id_lab" class="form-control"
                         value="<?php echo $row->id_lab;?>">
                         <input type="text" name="......" class="form-control"
-                        value="<?php echo 'LAB'.$row->id_lab;?>" readonly> 
+                        value="<?php echo $row->id_lab;?>" readonly> 
                         <!-- Kalo semisal pake readonly nama inputnya jangan tabrakan!! -->
                     </div>
 
