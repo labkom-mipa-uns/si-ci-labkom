@@ -47,6 +47,16 @@
              </a>
          </li>
 
+         <li class="nav-item bg-blue">
+             <a href="<?php echo base_url()?>C_PinjamRuang" class="nav-link" >
+              <i class="nav-icon fa fa-bullhorn"></i>
+               <p>
+                 Peminjaman Ruang
+               </p>
+             </a>
+         </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

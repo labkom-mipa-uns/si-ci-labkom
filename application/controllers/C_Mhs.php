@@ -56,7 +56,7 @@ class C_Mhs extends CI_Controller {
 
 
         $data = array(
-
+            
             'nim' => $nim,
             'nama_lengkap' => $nama_lengkap,
             'prodi' => $prodi
