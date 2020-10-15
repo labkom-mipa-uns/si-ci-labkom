@@ -52,9 +52,8 @@
             <td>
                 <?php echo anchor('C_PinjamAlat/delete_entry/'.$row['id_pinjam_alat'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
                 
-                <?php echo anchor('C_PinjamAlat/edit/'.$row['id_pinjam_alat'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
                 
-                <?php echo anchor('C_PinjamAlat/details/'.$row['id_pinjam_alat'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info"></i></div>') ?>
+                <?php echo anchor('C_PinjamAlat/details/'.$row['id_pinjam_alat'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
             </td> 
         </tr>
         <?php endforeach; ?>
@@ -66,7 +65,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog">               
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel">Tambah Data Peminjaman Alat</h4>

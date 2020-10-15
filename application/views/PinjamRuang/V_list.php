@@ -47,10 +47,8 @@
             <td><?php echo $row['nama_lab'] ?></td>
             <td>
                 <?php echo anchor('C_PinjamRuang/delete_entry/'.$row['id_pinjam_ruang'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                
-                <?php echo anchor('C_PinjamRuang/edit/'.$row['id_pinjam_ruang'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
-                
-                <?php echo anchor('C_PinjamRuang/details/'.$row['id_pinjam_ruang'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info"></i></div>') ?>
+                                
+                <?php echo anchor('C_PinjamRuang/details/'.$row['id_pinjam_ruang'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
             </td> 
         </tr>
         <?php endforeach; ?>

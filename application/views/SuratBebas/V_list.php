@@ -49,10 +49,8 @@
             <td><?php echo $row['tanggal'] ?></td>
             <td>
                 <?php echo anchor('C_SuratBebas/delete_entry/'.$row['id_surat'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                
-                <?php echo anchor('C_SuratBebas/edit/'.$row['id_surat'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
-                
-                <?php echo anchor('C_SuratBebas/details/'.$row['id_surat'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info"></i></div>') ?>
+                                
+                <?php echo anchor('C_SuratBebas/details/'.$row['id_surat'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
             </td> 
         </tr>
         <?php endforeach; ?>
