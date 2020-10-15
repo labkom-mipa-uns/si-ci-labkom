@@ -20,7 +20,7 @@
 
         <li class="nav-item bg-blue">
           <a href="<?php echo base_url()?>C_Lab" class="nav-link" >
-            <i class="nav-icon fa fa-bullhorn"></i>
+            <i class="nav-icon fa fa-list-alt"></i>
                <p>
                  Daftar Laboratorium 
                </p>
@@ -30,7 +30,7 @@
 
         <li class="nav-item bg-blue">
              <a href="<?php echo base_url()?>C_Alat" class="nav-link" >
-              <i class="nav-icon fa fa-bullhorn"></i>
+              <i class="nav-icon fa fa-briefcase"></i>
                <p>
                  Daftar Alat
                </p>
@@ -40,7 +40,7 @@
 
          <li class="nav-item bg-blue">
              <a href="<?php echo base_url()?>C_Mhs" class="nav-link" >
-              <i class="nav-icon fa fa-bullhorn"></i>
+              <i class="nav-icon fa fa-users"></i>
                <p>
                  Daftar Mahasiswa
                </p>
@@ -49,7 +49,7 @@
 
          <li class="nav-item bg-blue">
              <a href="<?php echo base_url()?>C_PinjamRuang" class="nav-link" >
-              <i class="nav-icon fa fa-bullhorn"></i>
+              <i class="nav-icon fa fa-tasks"></i>
                <p>
                  Peminjaman Ruang
                </p>
@@ -58,7 +58,7 @@
          
          <li class="nav-item bg-blue">
              <a href="<?php echo base_url()?>C_PinjamAlat" class="nav-link" >
-              <i class="nav-icon fa fa-bullhorn"></i>
+              <i class="nav-icon fa fa-tasks"></i>
                <p>
                  Peminjaman Alat
                </p>
@@ -67,7 +67,7 @@
 
          <li class="nav-item bg-blue">
              <a href="<?php echo base_url()?>C_SuratBebas" class="nav-link" >
-              <i class="nav-icon fa fa-bullhorn"></i>
+              <i class="nav-icon fa fa-file"></i>
                <p>
                  Surat Bebas Labkom
                </p>
