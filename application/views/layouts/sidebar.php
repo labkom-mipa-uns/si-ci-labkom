@@ -65,6 +65,16 @@
              </a>
          </li>
 
+         <li class="nav-item bg-blue">
+             <a href="<?php echo base_url()?>C_SuratBebas" class="nav-link" >
+              <i class="nav-icon fa fa-bullhorn"></i>
+               <p>
+                 Surat Bebas Labkom
+               </p>
+             </a>
+         </li>
+
+
 
 
         </ul>
