@@ -55,6 +55,16 @@
                </p>
              </a>
          </li>
+         
+         <li class="nav-item bg-blue">
+             <a href="<?php echo base_url()?>C_PinjamAlat" class="nav-link" >
+              <i class="nav-icon fa fa-bullhorn"></i>
+               <p>
+                 Peminjaman Alat
+               </p>
+             </a>
+         </li>
+
 
 
         </ul>

@@ -1,5 +1,5 @@
 <html>
-<title>List Peminjaman Ruang </title>
+<title>Details Peminjaman Ruang </title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
