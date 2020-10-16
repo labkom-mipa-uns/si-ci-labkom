@@ -66,17 +66,39 @@
 
                     <tr>
                             <td>Tanggal Pinjam </td>
-                            <?php foreach ($p_alat as $row) { ?>
-                            <td> : <?php echo $row->tanggal_pinjam ?></td>
+                            <?php 
+                            setlocale (LC_ALL, 'id_ID.UTF8', 'id_ID.UTF-8', 'id_ID.8859-1', 'id_ID', 'IND.UTF8', 'IND.UTF-8', 'IND.8859-1', 'IND', 'Indonesian.UTF8', 'Indonesian.UTF-8', 'Indonesian.8859-1', 'Indonesian', 'Indonesia', 'id', 'ID');
+                            foreach ($p_alat as $row) { ?>
+                            <td> : <?php echo strftime( " %A %d %B %Y " , strtotime($row->tanggal_pinjam));?></td>
+                            <?php } ?>
+                    </tr>
+
+
+                    <tr>
+                            <td>Tanggal Kembali </td>
+                            <?php 
+                            setlocale (LC_ALL, 'id_ID.UTF8', 'id_ID.UTF-8', 'id_ID.8859-1', 'id_ID', 'IND.UTF8', 'IND.UTF-8', 'IND.8859-1', 'IND', 'Indonesian.UTF8', 'Indonesian.UTF-8', 'Indonesian.8859-1', 'Indonesian', 'Indonesia', 'id', 'ID');
+                            foreach ($p_alat as $row) { ?>
+                            <td> : <?php echo strftime( " %A %d %B %Y " , strtotime($row->tanggal_kembali));?></td>
                             <?php } ?>
                     </tr>
 
                     <tr>
-                            <td>Tanggal Kembali </td>
-                            <?php foreach ($p_alat as $row) { ?>
-                            <td> : <?php echo $row->tanggal_kembali ?></td>
+                            <td>Waktu </td>
+                            <?php 
+                            foreach ($p_alat as $row) { ?>
+                            <td> : <?php echo date("H.i", strtotime($row->jam))?></td>
                             <?php } ?>
                     </tr>
+
+                    <tr>
+                            <td>Tempat </td>
+                            <?php foreach ($p_alat as $row) { ?>
+                            <td> : <?php echo $row->tempat ?></td>
+                            <?php } ?>
+                    </tr>
+
+
 
                     <tr>
                             <td>Nama Alat </td>
@@ -100,6 +122,16 @@
                     </tr>
 
                     <tr>
+                            <td>Keperluan Alat </td>
+                            <?php foreach ($p_alat as $row) { ?>
+                            <td> : <?php echo $row->keperluan ?></td>
+                            <?php } ?>
+                    </tr>
+
+
+                    
+
+                    <tr>
                             <td>Total Harga </td>
                             <?php foreach ($p_alat as $row) { ?>
                             <td> : <?php echo $row->total_harga ?></td>
@@ -119,6 +151,7 @@
                             <div align="center" class="mt-5 ">     
                               <?php echo anchor('C_PinjamAlat','<div class="btn btn-primary btn-sm">KEMBALI</div>') ?>
                               <?php echo anchor('C_PinjamAlat/edit/'.$row->id_pinjam_alat,'<div class="btn btn-info btn-sm">EDIT</div>') ?>
+                              <?php echo anchor('C_PinjamAlat/word/'.$row->id_pinjam_alat,'<div class="btn btn-warning btn-sm">DOWNLOAD</div>') ?>
                               <?php echo anchor('C_PinjamAlat/delete_entry/'.$row->id_pinjam_alat,'<div class="btn btn-danger btn-sm">HAPUS</div>') ?>
                             </div>
                     

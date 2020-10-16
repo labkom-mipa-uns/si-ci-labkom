@@ -1,5 +1,9 @@
 <?php
 
+defined('BASEPATH') OR exit('No direct script access allowed');
+use PhpOffice\PhpWord\PhpWord;
+use PhpOffice\PhpWord\Writer\Word2007;
+
 class C_SuratBebas extends CI_Controller {
 
 
@@ -85,6 +89,44 @@ class C_SuratBebas extends CI_Controller {
         $this->load->view('SuratBebas/V_details',$data);
         $this->load->view('layouts/footer');
 
+    }
+
+    public function word($id_surat){
+        $where = array('id_surat'=>$id_surat);
+        $data= $this->M_SuratBebas->get_details($where,'surat_bebas_labkom')->result();
+        
+        $phpWord = new PhpWord();
+        $template = $phpWord->loadTemplate('./uploads/template/surat-bebas-labkom.docx');
+
+        
+
+        foreach ($data as $row) { 
+            $nama_lengkap = $row->nama_lengkap;
+            $nim = $row->nim;
+            $prodi = $row->prodi;
+            $tanggal = $row->tanggal;
+           
+            $template->setValue('nama_lengkap', $nama_lengkap);
+            $template->setValue('nim', $nim);
+            $template->setValue('prodi', $prodi);
+            $template->setValue('tanggal', $tanggal);
+        }
+
+        $temp_filename = 'SURAT BEBAS LABKOM .docx';
+        $template->saveAs($temp_filename);
+
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename='.$temp_filename);
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($temp_filename));
+        flush();
+        readfile($temp_filename);
+        unlink($temp_filename);
+        exit;    
     }
 
 

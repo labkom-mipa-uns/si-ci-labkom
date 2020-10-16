@@ -51,10 +51,30 @@
                     </div>
 
                     <div class="form-group">
+                        <label for=""> Waktu</label>
+                        <input type="time" name="jam" class="form-control"
+                        value="<?php echo $row->jam;?>" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> Tempat</label>
+                        <input type="text" name="tempat" class="form-control"
+                        value="<?php echo $row->tempat;?>" >
+                    </div>
+
+
+
+                    <div class="form-group">
                         <label for=""> Jumlah Alat</label>
                         <input type="text" name="jumlah_alat" class="form-control"
                         value="<?php echo $row->jumlah_alat;?>" >
                     </div>
+
+                    <div class="form-group">
+                        <label > Keperluan Meminjam</label>
+                        <textarea class="form-control" name="keperluan" rows="4" placeholder="Contoh : 'Untuk Seminar TA di Gd.A FMIPA UNS'"><?php echo $row->keperluan;?></textarea>      
+                    </div>
+
 
                     <div class="form-group">
                         <label > Alat </label>

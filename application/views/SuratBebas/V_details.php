@@ -97,6 +97,7 @@
                             <div align="center" class="mt-5 ">     
                               <?php echo anchor('C_SuratBebas','<div class="btn btn-primary btn-sm">KEMBALI</div>') ?>
                               <?php echo anchor('C_SuratBebas/edit/'.$row->id_surat,'<div class="btn btn-info btn-sm">EDIT</div>') ?>
+                              <?php echo anchor('C_SuratBebas/word/'.$row->id_surat,'<div class="btn btn-warning btn-sm">DOWNLOAD</div>') ?>
                               <?php echo anchor('C_SuratBebas/delete_entry/'.$row->id_surat,'<div class="btn btn-danger btn-sm">HAPUS</div>') ?>
                             </div>
                     

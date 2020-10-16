@@ -93,6 +93,16 @@
             <input type="date" name="tanggal_kembali" class="form-control">
         </div>
 
+        <div class="form-group">
+            <label > Waktu Mulai </label>
+            <input type="time" name="jam" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label > Tempat  </label>
+            <input type="text" name="tempat" class="form-control">
+        </div>
+
 
         <div class="form-group">
             <label > Alat  </label>
@@ -111,6 +121,12 @@
             <label > Jumlah Alat </label>
             <input type="text" name="jumlah_alat" class="form-control">
         </div>
+
+        <div class="form-group">
+            <label > Keperluan Meminjam</label>
+            <textarea class="form-control" name="keperluan" rows="4" placeholder="Contoh : 'Untuk Seminar TA di Gd.A FMIPA UNS'"></textarea>      
+        </div>
+
 
 
         <div class="form-group">

@@ -79,6 +79,12 @@
         </div>
 
         <div class="form-group">
+            <label > Nomor Telepon(WA) </label>
+            <input type="text" name="no_wa" class="form-control">
+        </div>
+
+
+        <div class="form-group">
             <label > Tanggal Pinjam </label>
             <input type="date" name="tanggal" class="form-control">
         </div>
