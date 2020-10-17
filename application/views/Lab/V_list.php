@@ -30,13 +30,17 @@
       <div class="mb-3"></div>
         <table class="table">
         <tr>
+            <th> No </th>
             <th> ID Lab</th>
             <th> Nama Lab</th>
             <th colspan="2"> Aksi </th>
         </tr>
 
-        <?php foreach ($lab  as $row) : ?>
+        <?php 
+         $no=1;
+        foreach ($lab  as $row) : ?>
         <tr>
+            <td><?php echo $no++ ?></td>
             <td><?php echo $row['id_lab'] ?></td>
             <td><?php echo $row['nama_lab'] ?></td>
             <td>

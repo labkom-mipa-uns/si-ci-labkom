@@ -108,7 +108,7 @@
                     </tr>
 
                     <tr>
-                            <td>Harga Sewa Alat </td>
+                            <td>Harga Sewa Alat (Per Hari) </td>
                             <?php foreach ($p_alat as $row) { ?>
                             <td> : <?php echo $row->harga ?></td>
                             <?php } ?>

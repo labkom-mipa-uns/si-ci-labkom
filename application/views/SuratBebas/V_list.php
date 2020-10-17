@@ -30,6 +30,7 @@
       <div class="mb-3"></div>
         <table class="table">
         <tr>
+            <th> No </th>
             <th> ID SURAT </th>
             <th> NIM</th>
             <th> Nama</th>
@@ -39,8 +40,11 @@
             <th colspan="2"> Aksi </th>
         </tr>
 
-        <?php foreach ($surat  as $row) : ?>
+        <?php 
+         $no=1;
+        foreach ($surat  as $row) : ?>
         <tr>
+            <td><?php echo $no++ ?></td>
             <td><?php echo $row['id_surat'] ?></td>
             <td><?php echo $row['nim'] ?></td>
             <td><?php echo $row['nama_lengkap'] ?></td>
@@ -97,7 +101,7 @@
               $date = strftime( "%d %B %Y" , time());
             ?>
             <!-- <label >Tanggal </label> -->
-            <input type="hidden" name="tanggal" class="form-control" value="<?php echo 'Surakarta, '.$date ?>">
+            <input type="hidden" name="tanggal" class="form-control" value="<?php echo $date ?>">
         </div>
 
 

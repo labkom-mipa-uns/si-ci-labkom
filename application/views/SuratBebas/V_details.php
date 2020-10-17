@@ -72,7 +72,7 @@
                     </tr>
 
                     <tr>
-                            <td>Tempat, Tanggal Pembuatan Surat </td>
+                            <td>Tanggal Pembuatan Surat </td>
                             <?php foreach ($surat as $row) { ?>
                             <td> : <?php echo $row->tanggal ?></td>
                             <?php } ?>

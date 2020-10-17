@@ -30,16 +30,22 @@
       <div class="mb-3"></div>
         <table class="table">
         <tr>
+            <th> No </th>
             <th> NIM </th>
             <th> Nama Mahasiswa</th>
+            <th> Angkatan</th>
             <th> Program Studi</th>
             <th colspan="2"> Aksi </th>
         </tr>
-
-        <?php foreach ($mhs  as $row) : ?>
+      
+        <?php 
+        $no=1;
+        foreach ($mhs  as $row) : ?>
         <tr>
+            <td><?php echo $no++ ?></td>
             <td><?php echo $row['nim'] ?></td>
             <td><?php echo $row['nama_lengkap'] ?></td>
+            <td><?php echo $row['angkatan'] ?></td>
             <td><?php echo $row['prodi'] ?></td>
             <td>
                 <?php echo anchor('C_Mhs/delete_entry/'.$row['nim'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
@@ -65,9 +71,27 @@
         </button>
       </div>
       <div class="modal-body">
-      <form method="post" action="<?php echo base_url().'C_Mhs/insert_entry'; ?>">
-        
 
+          <h3>Upload File Excel</h3>
+
+          <a href="<?php echo base_url().'C_Mhs/download' ?>">Download Template File Excel</a>
+          <?php echo form_open_multipart('C_Mhs/upload');?>
+          <div class="form-group">
+
+          <?php echo "<input type='file' name='file' size='20'  />";
+          echo "<input type='submit' name='submit' value='upload' class='btn btn-primary' /> ";?>
+          </div>
+
+          <?php echo "</form>"?>
+          <br>
+          <br>
+          <h4 align="center" class="bg-warning">Atau</h4>
+          <br>
+          <br>
+          <h3>Input Manual</h3>
+
+      <form method="post" action="<?php echo base_url().'C_Mhs/insert_entry'; ?>">
+                
         <div class="form-group">
             <label > NIM</label>
             <input type="text" name="nim" class="form-control">
@@ -79,11 +103,16 @@
         </div>
 
         <div class="form-group">
-            <label > Program Studi</label>
-            <input type="text" name="prodi" class="form-control">
+            <label > Angkatan</label>
+            <input type="text" name="angkatan" class="form-control">
         </div>
 
 
+
+        <div class="form-group">
+            <label > Program Studi</label>
+            <input type="text" name="prodi" class="form-control">
+        </div> 
 
         <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
         <button type="submit" class="btn btn-primary">Tambah Data</button>

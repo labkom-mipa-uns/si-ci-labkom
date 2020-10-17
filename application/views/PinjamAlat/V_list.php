@@ -30,6 +30,7 @@
       <div class="mb-3"></div>
         <table class="table">
         <tr>
+            <th> No </th>
             <th> ID </th>
             <th> NIM</th>
             <th> Nama</th>
@@ -40,8 +41,11 @@
             <th colspan="2"> Aksi </th>
         </tr>
 
-        <?php foreach ($p_alat  as $row) : ?>
+        <?php 
+         $no=1;
+        foreach ($p_alat  as $row) : ?>
         <tr>
+            <td><?php echo $no++ ?></td>
             <td><?php echo $row['id_pinjam_alat'] ?></td>
             <td><?php echo $row['nim'] ?></td>
             <td><?php echo $row['nama_lengkap'] ?></td>
