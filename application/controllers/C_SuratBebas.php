@@ -20,7 +20,7 @@ class C_SuratBebas extends CI_Controller {
                 //konfigurasi pagination
                 $config['base_url'] = site_url('C_SuratBebas/index'); //site url
                 $config['total_rows'] = $this->db->count_all('surat_bebas_labkom'); //total row
-                $config['per_page'] = 1;  //show record per halaman
+                $config['per_page'] = 10;  //show record per halaman
                 $config["uri_segment"] = 3;  // uri parameter
                 $choice = $config["total_rows"] / $config["per_page"];
                 $config["num_links"] = floor($choice);

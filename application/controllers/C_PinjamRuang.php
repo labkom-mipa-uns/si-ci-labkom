@@ -18,7 +18,7 @@ class C_PinjamRuang extends CI_Controller {
                 //konfigurasi pagination
                 $config['base_url'] = site_url('C_PinjamRuang/index'); //site url
                 $config['total_rows'] = $this->db->count_all('peminjaman_ruang'); //total row
-                $config['per_page'] = 1;  //show record per halaman
+                $config['per_page'] = 10;  //show record per halaman
                 $config["uri_segment"] = 3;  // uri parameter
                 $choice = $config["total_rows"] / $config["per_page"];
                 $config["num_links"] = floor($choice);
