@@ -4,8 +4,8 @@ How To Install / Cara Install
 1. 	Download Zip This Repository 
 		Unduh Zip Repository ini
 
-2. 	Extract The Zip into the htdocs directory(C:/xampp/htdocs/)
-		Ekstrak zip ini ke dalam direktori htdocs (C:/xampp/htdocs/)
+2. 	Extract The Zip into the htdocs directory and change the folder name like this "si-ci-labkom"(C:/xampp/htdocs/)
+		Ekstrak zip ini ke dalam direktori htdocs dan ubah nama folder seperti ini "si-ci-labkom" (C:/xampp/htdocs/)
 		
 3.	Don't forget to turn on Web Server & MySQL Server, I use Xampp.
 		Jangan lupa nyalakaan Web Server & MySql Server
