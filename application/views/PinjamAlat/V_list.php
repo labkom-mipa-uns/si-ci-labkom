@@ -27,6 +27,11 @@
         <i class="fa fa-plus"></i>
         Tambah Data Peminjaman Alat
       </button>
+
+      <button class="btn btn-success" onclick="window.location.href='C_PinjamAlat/export_excel';">
+      <i class="fa fa-file-excel"></i>
+      Export Laporan Ms.Excel
+      </button>
       <div class="mb-3"></div>
         <table class="table">
         <thead>

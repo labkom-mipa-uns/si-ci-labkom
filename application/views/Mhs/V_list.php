@@ -36,6 +36,7 @@
                           <th>Nama Lengkap</th>
                           <th>Angkatan</th>
                           <th>Prodi</th>
+                          <th></th>
                       </tr>
                   </thead>
                   <tbody>

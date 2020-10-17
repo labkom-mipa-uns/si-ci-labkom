@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 use PhpOffice\PhpWord\PhpWord;
 use PhpOffice\PhpWord\Writer\Word2007;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class C_PinjamAlat extends CI_Controller {
 
@@ -225,7 +227,61 @@ class C_PinjamAlat extends CI_Controller {
             exit;    
         }
     
-
+        
+        public function export_excel()
+		{
+			$this->load->model('M_PinjamAlat');
+			$spreadsheet = new Spreadsheet();
+			$sheet = $spreadsheet->getActiveSheet();
+			$sheet->setCellValue('A1', 'No');
+			$sheet->setCellValue('B1', 'ID Peminjaman Alat');
+			$sheet->setCellValue('C1', 'NIM');
+			$sheet->setCellValue('D1', 'Nama');
+			$sheet->setCellValue('E1', 'Prodi');
+			$sheet->setCellValue('F1', 'ID Alat');
+			$sheet->setCellValue('G1', 'Tanggal Pinjam');
+			$sheet->setCellValue('H1', 'Tanggal Kembali');
+			$sheet->setCellValue('I1', 'Waktu Mulai');
+			$sheet->setCellValue('J1', 'Tempat');
+			$sheet->setCellValue('K1', 'Nama Alat');
+			$sheet->setCellValue('L1', 'Harga Sewa');
+			$sheet->setCellValue('M1', 'Jumlah Alat Disewa');
+			$sheet->setCellValue('N1', 'Keperluan');
+			$sheet->setCellValue('O1', 'Total Harga Sewa(Per Hari)');
+			$sheet->setCellValue('P1', 'Status');
+			
+			$data = $this->M_PinjamAlat->export_excel();
+			$no = 1;
+			$x = 2;
+			foreach($data as $row)
+			{
+				$sheet->setCellValue('A'.$x, $no++);
+				$sheet->setCellValue('B'.$x, $row->id_pinjam_alat);
+				$sheet->setCellValue('C'.$x, $row->nim);
+				$sheet->setCellValue('D'.$x, $row->nama_lengkap);
+				$sheet->setCellValue('E'.$x, $row->prodi);
+				$sheet->setCellValue('F'.$x, $row->id_alat);
+				$sheet->setCellValue('G'.$x, $row->tanggal_pinjam);
+				$sheet->setCellValue('H'.$x, $row->tanggal_kembali);
+				$sheet->setCellValue('I'.$x, $row->jam);
+				$sheet->setCellValue('J'.$x, $row->tempat);
+				$sheet->setCellValue('K'.$x, $row->nama_alat);
+				$sheet->setCellValue('L'.$x, $row->harga);
+				$sheet->setCellValue('M'.$x, $row->jumlah_alat);
+				$sheet->setCellValue('N'.$x, $row->keperluan);
+				$sheet->setCellValue('O'.$x, $row->total_harga);
+				$sheet->setCellValue('P'.$x, $row->status);
+				$x++;
+			}
+			$writer = new Xlsx($spreadsheet);
+			$filename = 'laporan-peminjaman-alat';
+			
+			header('Content-Type: application/vnd.ms-excel');
+			header('Content-Disposition: attachment;filename="'. $filename .'.xlsx"'); 
+			header('Cache-Control: max-age=0');
+	
+			$writer->save('php://output');
+		}
 
 
 }

@@ -56,4 +56,13 @@ class M_PinjamRuang extends CI_Model {
     }
 
 
+    public function export_excel()
+    {
+       $this->db->select('*');
+       $this->db->join('mahasiswa','mahasiswa.nim = peminjaman_ruang.nim','LEFT');
+       $this->db->join('lab','lab.id_lab = peminjaman_ruang.id_lab','LEFT');
+       $query = $this->db->get('peminjaman_ruang')->result();
+       return $query;
+    }
+
 } 

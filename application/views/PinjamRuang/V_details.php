@@ -109,21 +109,7 @@
                             <td> : <?php echo $row->keperluan ?></td>
                             <?php } ?>
                     </tr>
-
                     
-                    <!-- <tr >
-                              <td></td>
-                              <td>
-                              <?php foreach ($p_ruang as $row) { ?>
-                              
-                              <ul>
-
-                              
-                              </ul>
-                              <?php } ?>
-                              </td>
-                              <td></td>
-                    </tr> -->
               </table>
                             <div align="center" class="mt-5 ">     
                               <?php echo anchor('C_PinjamRuang','<div class="btn btn-primary btn-sm">KEMBALI</div>') ?>

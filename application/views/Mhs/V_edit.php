@@ -38,6 +38,13 @@
                         value="<?php echo $row->nama_lengkap;?>">
                     </div>
 
+                    <div class="form-group">
+                        <label for=""> Angkatan </label>
+                        <input type="Text" name="angkatan" class="form-control"
+                        value="<?php echo $row->angkatan;?>">
+                    </div>
+
+
 
                     <div class="form-group">
                         <label for=""> Program Studi</label>

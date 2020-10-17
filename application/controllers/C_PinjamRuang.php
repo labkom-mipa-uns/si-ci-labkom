@@ -1,6 +1,8 @@
 <?php
 use PhpOffice\PhpWord\PhpWord;
 use PhpOffice\PhpWord\Writer\Word2007;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class C_PinjamRuang extends CI_Controller {
 
@@ -126,7 +128,7 @@ class C_PinjamRuang extends CI_Controller {
         );
 
         $this->M_PinjamRuang->update_data($where,$data,'peminjaman_ruang'); 
-        redirect('C_PinjamRuang/index');
+        redirect('C_PinjamRuang/details/'.$id_pinjam_ruang);
     }
 
 
@@ -190,5 +192,54 @@ class C_PinjamRuang extends CI_Controller {
             unlink($temp_filename);
             exit;    
         }
+
+
+        public function export_excel()
+		{
+			$this->load->model('M_PinjamRuang');
+			$spreadsheet = new Spreadsheet();
+			$sheet = $spreadsheet->getActiveSheet();
+			$sheet->setCellValue('A1', 'No');
+			$sheet->setCellValue('B1', 'ID Peminjaman Ruang');			
+			$sheet->setCellValue('C1', 'NIM');
+			$sheet->setCellValue('D1', 'Nama');
+			$sheet->setCellValue('E1', 'prodi');
+			$sheet->setCellValue('F1', 'no_wa');
+			$sheet->setCellValue('G1', 'id_lab');
+			$sheet->setCellValue('H1', 'nama_lab');
+			$sheet->setCellValue('I1', 'tanggal');
+			$sheet->setCellValue('J1', 'jam_pinjam');
+			$sheet->setCellValue('K1', 'jam_kembali');
+            $sheet->setCellValue('L1', 'keperluan');
+            
+			$data = $this->M_PinjamRuang->export_excel();
+			$no = 1;
+			$x = 2;
+			foreach($data as $row)
+			{
+				$sheet->setCellValue('A'.$x, $no++);
+				$sheet->setCellValue('B'.$x, $row->id_pinjam_ruang);
+				$sheet->setCellValue('C'.$x, $row->nim);
+				$sheet->setCellValue('D'.$x, $row->nama_lengkap);
+				$sheet->setCellValue('E'.$x, $row->prodi);
+				$sheet->setCellValue('F'.$x, $row->no_wa);
+				$sheet->setCellValue('G'.$x, $row->id_lab);
+				$sheet->setCellValue('H'.$x, $row->nama_lab);
+				$sheet->setCellValue('I'.$x, $row->tanggal);
+				$sheet->setCellValue('J'.$x, $row->jam_pinjam);
+				$sheet->setCellValue('K'.$x, $row->jam_kembali);
+				$sheet->setCellValue('L'.$x, $row->keperluan);
+				$x++;
+			}
+			$writer = new Xlsx($spreadsheet);
+			$filename = 'laporan-peminjaman-ruang-lab';
+			
+			header('Content-Type: application/vnd.ms-excel');
+			header('Content-Disposition: attachment;filename="'.$filename.'.xlsx"'); 
+			header('Cache-Control: max-age=0');
+	
+			$writer->save('php://output');
+		}
+
 
 }

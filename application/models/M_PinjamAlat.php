@@ -66,5 +66,14 @@ class M_PinjamAlat extends CI_Model {
         $this->db->update($table,$data);
     }
 
+    public function export_excel()
+     {
+        $this->db->select('*');
+        $this->db->join('mahasiswa','mahasiswa.nim = peminjaman_alat.nim','LEFT');
+        $this->db->join('alat','alat.id_alat = peminjaman_alat.id_alat','LEFT');
+        $query = $this->db->get('peminjaman_alat')->result();
+        return $query;
+     }
+
 
 } 

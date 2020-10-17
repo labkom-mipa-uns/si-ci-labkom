@@ -66,12 +66,14 @@ class C_Mhs extends CI_Controller {
 
         $nim = $this->input->post('nim');
         $nama_lengkap = $this->input->post('nama_lengkap');
+        $angkatan = $this->input->post('angkatan');
         $prodi = $this->input->post('prodi');
 
         $data = array(
 
             'nim' => $nim,
             'nama_lengkap' => $nama_lengkap,
+            'angkatan' => $angkatan,
             'prodi' => $prodi
         );
 
