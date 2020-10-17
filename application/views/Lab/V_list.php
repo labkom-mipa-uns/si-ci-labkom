@@ -33,7 +33,7 @@
             <th> No </th>
             <th> ID Lab</th>
             <th> Nama Lab</th>
-            <th colspan="2"> Aksi </th>
+            <th >  </th>
         </tr>
 
         <?php 

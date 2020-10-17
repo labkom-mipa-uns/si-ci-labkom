@@ -3,12 +3,11 @@
 class M_SuratBebas extends CI_Model {
     
     //Fungsi untuk mendapatkan data dari database grt(nama table)
-    public function get_data()
+    public function get_data($limit,$start)
     {
         $this->db->select('*');
-        $this->db->from('surat_bebas_labkom');
         $this->db->join('mahasiswa','mahasiswa.nim = surat_bebas_labkom.nim','LEFT');
-        $query = $this->db->get()->result_array();
+        $query = $this->db->get('surat_bebas_labkom',$limit, $start);
         return $query;
     }
 

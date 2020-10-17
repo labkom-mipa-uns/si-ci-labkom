@@ -3,9 +3,9 @@
 class M_Alat extends CI_Model {
     
     //Fungsi untuk mendapatkan data dari database grt(nama table)
-    public function get_data()
-    {
-        return $this->db->get('alat')->result_array();
+    function get_data($limit, $start){
+        $query = $this->db->get('alat', $limit, $start);
+        return $query;
     }
 
 

@@ -29,6 +29,7 @@
       </button>
       <div class="mb-3"></div>
         <table class="table">
+        <thead>
         <tr>
             <th> No </th>
             <th> ID </th>
@@ -38,30 +39,42 @@
             <th> Tanggal Kembali</th>
             <th> Alat</th>
             <th> Status</th>
-            <th colspan="2"> Aksi </th>
+            <th> </th>
         </tr>
+        </thead>
 
+        <tbody>
         <?php 
-         $no=1;
-        foreach ($p_alat  as $row) : ?>
-        <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $row['id_pinjam_alat'] ?></td>
-            <td><?php echo $row['nim'] ?></td>
-            <td><?php echo $row['nama_lengkap'] ?></td>
-            <td><?php echo $row['tanggal_pinjam'] ?></td>
-            <td><?php echo $row['tanggal_kembali'] ?></td>
-            <td><?php echo $row['nama_alat'] ?></td>
-            <td><?php echo $row['status'] ?></td>
-            <td>
-                <?php echo anchor('C_PinjamAlat/delete_entry/'.$row['id_pinjam_alat'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                
-                
-                <?php echo anchor('C_PinjamAlat/details/'.$row['id_pinjam_alat'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
-            </td> 
-        </tr>
-        <?php endforeach; ?>
+          $i = $this->uri->segment(3)+1;
+          foreach ($data->result() as $row) :?>
+             <tr>
+                 <td><?php echo $i++; ?></td>
+                 <td><?php echo $row->id_pinjam_alat; ?></td>
+                 <td><?php echo $row->nim; ?></td>
+                 <td><?php echo $row->nama_lengkap; ?></td>
+                 <td><?php echo $row->tanggal_pinjam; ?></td>
+                 <td><?php echo $row->tanggal_kembali; ?></td>
+                 <td><?php echo $row->nama_alat; ?></td>
+                 <td><?php echo $row->status; ?></td>
+
+                 <td>
+                    <?php echo anchor('C_PinjamAlat/delete_entry/'.$row->id_pinjam_alat,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
+                     <?php echo anchor('C_PinjamAlat/details/'.$row->id_pinjam_alat,'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
+
+                 </td> 
+
+             </tr>
+         <?php endforeach; ?>
+          <tbody>
         </table>
+
+        <div class="row">
+                  <div class="col">
+                      <!--Tampilkan pagination-->
+                      <?php echo $pagination; ?>
+                  </div>
+              </div>
+
     </section>
 
     

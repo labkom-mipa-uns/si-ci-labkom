@@ -37,28 +37,37 @@
             <th> Email</th>
             <th> Nomor WhatsApp</th>
             <th> Tanggal</th>
-            <th colspan="2"> Aksi </th>
+            <th >  </th>
         </tr>
 
         <?php 
-         $no=1;
-        foreach ($surat  as $row) : ?>
-        <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $row['id_surat'] ?></td>
-            <td><?php echo $row['nim'] ?></td>
-            <td><?php echo $row['nama_lengkap'] ?></td>
-            <td><?php echo $row['email'] ?></td>
-            <td><?php echo $row['no_wa'] ?></td>
-            <td><?php echo $row['tanggal'] ?></td>
-            <td>
-                <?php echo anchor('C_SuratBebas/delete_entry/'.$row['id_surat'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                                
-                <?php echo anchor('C_SuratBebas/details/'.$row['id_surat'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
-            </td> 
-        </tr>
-        <?php endforeach; ?>
+          $i = $this->uri->segment(3)+1;
+         foreach ($data->result() as $row) :?>
+             <tr>
+                 <td><?php echo $i++; ?></td>
+                 <td><?php echo $row->id_surat; ?></td>
+                 <td><?php echo $row->nim; ?></td>
+                 <td><?php echo $row->nama_lengkap; ?></td>
+                 <td><?php echo $row->email; ?></td>
+                 <td><?php echo $row->no_wa; ?></td>
+                 <td><?php echo $row->tanggal; ?></td>
+
+                 <td>
+                    <?php echo anchor('C_SuratBebas/delete_entry/'.$row->id_surat,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
+                     <?php echo anchor('C_SuratBebas/details/'.$row->id_surat,'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
+
+                 </td> 
+
+             </tr>
+         <?php endforeach; ?>
         </table>
+
+        <div class="row">
+                  <div class="col">
+                      <!--Tampilkan pagination-->
+                      <?php echo $pagination; ?>
+                  </div>
+              </div>
     </section>
 
     

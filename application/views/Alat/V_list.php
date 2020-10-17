@@ -28,31 +28,42 @@
         Tambah Data Alat Lab
       </button>
       <div class="mb-3"></div>
-        <table class="table">
-        <tr>
-            <th> No </th>
-            <th> ID Alat</th>
-            <th> Nama Alat</th>
-            <th> Harga</th>
-            <th colspan="2"> Aksi </th>
-        </tr>
+      <table class="table" >
+                  <thead>
+                      <tr>
+                          <th>No</th>
+                          <th>ID Alat</th>
+                          <th>Nama Alat</th>
+                          <th>Harga Sewa</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!--Fetch data dari database-->
+                      <?php 
+                       $i = $this->uri->segment(3)+1;
+                      foreach ($data->result() as $row) :?>
+                          <tr>
+                              <td><?php echo $i++; ?></td>
+                              <td><?php echo $row->id_alat; ?></td>
+                              <td><?php echo $row->nama_alat; ?></td>
+                              <td><?php echo $row->harga; ?></td>
+                              <td>
+                                  <?php echo anchor('C_Alat/delete_entry/'.$row->id_alat,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
 
-        <?php 
-         $no=1;
-        foreach ($alat  as $row) : ?>
-        <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $row['id_alat'] ?></td>
-            <td><?php echo $row['nama_alat'] ?></td>
-            <td><?php echo $row['harga'] ?></td>
-            <td>
-                <?php echo anchor('C_Alat/delete_entry/'.$row['id_alat'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                
-                <?php echo anchor('C_Alat/edit/'.$row['id_alat'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
-            </td> 
-        </tr>
-        <?php endforeach; ?>
-        </table>
+                                  <?php echo anchor('C_Alat/edit/'.$row->id_alat,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
+                              </td> 
+
+                          </tr>
+                      <?php endforeach; ?>
+                  </tbody>
+              </table>
+              <div class="row">
+                  <div class="col">
+                      <!--Tampilkan pagination-->
+                      <?php echo $pagination; ?>
+                  </div>
+              </div>
     </section>
 
     

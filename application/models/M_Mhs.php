@@ -2,10 +2,11 @@
 
 class M_Mhs extends CI_Model {
     
+    
     //Fungsi untuk mendapatkan data dari database grt(nama table)
-    public function get_data()
-    {
-        return $this->db->get('mahasiswa')->result_array();
+    function get_data($limit, $start){
+        $query = $this->db->get('mahasiswa', $limit, $start);
+        return $query;
     }
 
 

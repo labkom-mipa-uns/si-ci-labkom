@@ -3,14 +3,13 @@
 class M_PinjamAlat extends CI_Model {
     
     //Fungsi untuk mendapatkan data dari database grt(nama table)
-    public function get_data()
+    public function get_data($limit,$start)
     {
         // return $this->db->get('peminjaman_alat')->result_array();
         $this->db->select('*');
-        $this->db->from('peminjaman_alat');
         $this->db->join('mahasiswa','mahasiswa.nim = peminjaman_alat.nim','LEFT');
         $this->db->join('alat','alat.id_alat = peminjaman_alat.id_alat','LEFT');
-        $query = $this->db->get()->result_array();
+        $query = $this->db->get('peminjaman_alat',$limit, $start);
         return $query;
 
     }

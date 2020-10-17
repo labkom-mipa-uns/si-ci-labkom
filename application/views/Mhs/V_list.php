@@ -28,33 +28,44 @@
         Tambah Data Mahasiswa
       </button>
       <div class="mb-3"></div>
-        <table class="table">
-        <tr>
-            <th> No </th>
-            <th> NIM </th>
-            <th> Nama Mahasiswa</th>
-            <th> Angkatan</th>
-            <th> Program Studi</th>
-            <th colspan="2"> Aksi </th>
-        </tr>
-      
-        <?php 
-        $no=1;
-        foreach ($mhs  as $row) : ?>
-        <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $row['nim'] ?></td>
-            <td><?php echo $row['nama_lengkap'] ?></td>
-            <td><?php echo $row['angkatan'] ?></td>
-            <td><?php echo $row['prodi'] ?></td>
-            <td>
-                <?php echo anchor('C_Mhs/delete_entry/'.$row['nim'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                
-                <?php echo anchor('C_Mhs/edit/'.$row['nim'],'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
-            </td> 
-        </tr>
-        <?php endforeach; ?>
-        </table>
+              <table class="table" >
+                  <thead>
+                      <tr>
+                          <th>No</th>
+                          <th>NIM</th>
+                          <th>Nama Lengkap</th>
+                          <th>Angkatan</th>
+                          <th>Prodi</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!--Fetch data dari database-->
+                      <?php 
+                       $i = $this->uri->segment(3)+1;
+                      foreach ($data->result() as $row) :?>
+                          <tr>
+                              <td><?php echo $i++; ?></td>
+                              <td><?php echo $row->nim; ?></td>
+                              <td><?php echo $row->nama_lengkap; ?></td>
+                              <td><?php echo $row->angkatan; ?></td>
+                              <td><?php echo $row->prodi; ?></td>
+
+                              <td>
+                                  <?php echo anchor('C_Mhs/delete_entry/'.$row->nim,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
+
+                                  <?php echo anchor('C_Mhs/edit/'.$row->nim,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
+                              </td> 
+
+                          </tr>
+                      <?php endforeach; ?>
+                  </tbody>
+              </table>
+              <div class="row">
+                  <div class="col">
+                      <!--Tampilkan pagination-->
+                      <?php echo $pagination; ?>
+                  </div>
+              </div>
     </section>
 
     

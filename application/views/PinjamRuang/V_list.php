@@ -36,27 +36,34 @@
             <th> Nama</th>
             <th> Tanggal</th>
             <th> Ruangan</th>
-            <th colspan="2"> Aksi </th>
+            <th> </th>
         </tr>
 
         <?php 
-         $no=1;
-        foreach ($p_ruang  as $row) : ?>
-        <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $row['id_pinjam_ruang'] ?></td>
-            <td><?php echo $row['nim'] ?></td>
-            <td><?php echo $row['nama_lengkap'] ?></td>
-            <td><?php echo $row['tanggal'] ?></td>
-            <td><?php echo $row['nama_lab'] ?></td>
-            <td>
-                <?php echo anchor('C_PinjamRuang/delete_entry/'.$row['id_pinjam_ruang'],'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
-                                
-                <?php echo anchor('C_PinjamRuang/details/'.$row['id_pinjam_ruang'],'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
-            </td> 
-        </tr>
-        <?php endforeach; ?>
+          $i = $this->uri->segment(3)+1;
+         foreach ($data->result() as $row) :?>
+             <tr>
+                 <td><?php echo $i++; ?></td>
+                 <td><?php echo $row->id_pinjam_ruang; ?></td>
+                 <td><?php echo $row->nim; ?></td>
+                 <td><?php echo $row->nama_lengkap; ?></td>
+                 <td><?php echo $row->tanggal; ?></td>
+                 <td><?php echo $row->nama_lab; ?></td>
+                 <td>
+                    <?php echo anchor('C_PinjamRuang/delete_entry/'.$row->id_pinjam_ruang,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
+                     <?php echo anchor('C_PinjamRuang/details/'.$row->id_pinjam_ruang,'<div class="btn btn-warning btn-sm"><i class="fa fa-info-circle"></i></div>') ?>
+                 </td> 
+
+             </tr>
+         <?php endforeach; ?>
         </table>
+
+        <div class="row">
+                  <div class="col">
+                      <!--Tampilkan pagination-->
+                      <?php echo $pagination; ?>
+                  </div>
+              </div>
     </section>
 
     
