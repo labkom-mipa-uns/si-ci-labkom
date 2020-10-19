@@ -63,7 +63,6 @@ class C_PinjamRuang extends CI_Controller {
     public function insert_entry(){
 
         $nim = $this->input->post('nim');
-        $no_wa = $this->input->post('no_wa');
         $tanggal = $this->input->post('tanggal');
         $id_lab = $this->input->post('id_lab');
         $jam_pinjam = $this->input->post('jam_pinjam');
@@ -73,7 +72,6 @@ class C_PinjamRuang extends CI_Controller {
         $data = array(
 
             'nim' => $nim,
-            'no_wa' => $no_wa,
             'tanggal' => $tanggal,
             'id_lab' => $id_lab,
             'jam_pinjam' => $jam_pinjam,

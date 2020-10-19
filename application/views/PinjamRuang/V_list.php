@@ -95,10 +95,6 @@
             <input type="text" name="nim" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label > Nomor Telepon(WA) </label>
-            <input type="text" name="no_wa" class="form-control">
-        </div>
 
 
         <div class="form-group">

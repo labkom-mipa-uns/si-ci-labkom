@@ -36,6 +36,8 @@
                           <th>Nama Lengkap</th>
                           <th>Angkatan</th>
                           <th>Prodi</th>
+                          <th>No WA</th>
+                          <th>Email</th>
                           <th></th>
                       </tr>
                   </thead>
@@ -50,6 +52,8 @@
                               <td><?php echo $row->nama_lengkap; ?></td>
                               <td><?php echo $row->angkatan; ?></td>
                               <td><?php echo $row->prodi; ?></td>
+                              <td><?php echo $row->no_wa; ?></td>
+                              <td><?php echo $row->email; ?></td>
 
                               <td>
                                   <?php echo anchor('C_Mhs/delete_entry/'.$row->nim,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?>
@@ -125,6 +129,20 @@
             <label > Program Studi</label>
             <input type="text" name="prodi" class="form-control">
         </div> 
+
+
+        <div class="form-group">
+            <label > Nomor WA</label>
+            <input type="text" name="no_wa" class="form-control">
+        </div> 
+
+
+        <div class="form-group">
+            <label > Email</label>
+            <input type="text" name="email" class="form-control">
+        </div> 
+
+        
 
         <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
         <button type="submit" class="btn btn-primary">Tambah Data</button>

@@ -52,6 +52,20 @@
                         value="<?php echo $row->prodi;?>">
                     </div>
 
+                    <div class="form-group">
+                        <label for=""> Nomor WA</label>
+                        <input type="Text" name="no_wa" class="form-control"
+                        value="<?php echo $row->no_wa;?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> Email</label>
+                        <input type="Text" name="email" class="form-control"
+                        value="<?php echo $row->email;?>">
+                    </div>
+
+
+
                     
                     <button type="reset" class="btn btn-danger">Reset</button>
                     <button type="submit" class="btn btn-primary">Simpan Data</button>

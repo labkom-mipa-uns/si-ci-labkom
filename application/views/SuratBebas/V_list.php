@@ -93,15 +93,6 @@
             <input type="text" name="nim" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label > E-mail </label>
-            <input type="text" name="email" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label > Nomor WhatsApp </label>
-            <input type="text" name="no_wa" class="form-control">
-        </div>
 
 
         <div class="form-group">

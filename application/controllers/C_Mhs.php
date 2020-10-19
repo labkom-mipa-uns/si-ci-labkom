@@ -68,13 +68,17 @@ class C_Mhs extends CI_Controller {
         $nama_lengkap = $this->input->post('nama_lengkap');
         $angkatan = $this->input->post('angkatan');
         $prodi = $this->input->post('prodi');
+        $no_wa = $this->input->post('no_wa');
+        $email = $this->input->post('email');
 
         $data = array(
 
             'nim' => $nim,
             'nama_lengkap' => $nama_lengkap,
             'angkatan' => $angkatan,
-            'prodi' => $prodi
+            'prodi' => $prodi,
+            'no_wa' => $no_wa,
+            'email' => $email
         );
 
         $this->M_Mhs->insert_entry($data);
@@ -103,13 +107,19 @@ class C_Mhs extends CI_Controller {
         $nim = $this->input->post('nim');
         $nama_lengkap = $this->input->post('nama_lengkap');
         $prodi = $this->input->post('prodi');
+        $no_wa = $this->input->post('no_wa');
+        $email = $this->input->post('email');
+
 
 
         $data = array(
             
             'nim' => $nim,
             'nama_lengkap' => $nama_lengkap,
-            'prodi' => $prodi
+            'prodi' => $prodi,
+            'no_wa' => $no_wa,
+            'email' => $email
+
         );
 
         $where = array (
@@ -161,10 +171,12 @@ class C_Mhs extends CI_Controller {
                 $nama_lengkap = $sheetData[$i]['2'];
                 $angkatan = $sheetData[$i]['3'];
                 $prodi = $sheetData[$i]['4'];
+                $no_wa = $sheetData[$i]['5'];
+                $email = $sheetData[$i]['6'];
 
                 
                 
-                mysqli_query($koneksi,"insert into mahasiswa (nim,nama_lengkap,angkatan, prodi) values ('$nim','$nama_lengkap','$angkatan','$prodi')");
+                mysqli_query($koneksi,"insert into mahasiswa (nim,nama_lengkap,angkatan, prodi,no_wa,email) values ('$nim','$nama_lengkap','$angkatan','$prodi','$no_wa','$email')");
             }
                     
             redirect('C_Mhs/index');

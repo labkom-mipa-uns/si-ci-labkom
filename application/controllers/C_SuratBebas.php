@@ -62,15 +62,11 @@ class C_SuratBebas extends CI_Controller {
 
     public function insert_entry(){
         $nim = $this->input->post('nim');
-        $email = $this->input->post('email');
-        $no_wa = $this->input->post('no_wa');
         $tanggal = $this->input->post('tanggal');
 
         $data = array(
 
             'nim' => $nim,
-            'email' => $email,
-            'no_wa' => $no_wa,
             'tanggal' => $tanggal
         );
 
@@ -99,8 +95,6 @@ class C_SuratBebas extends CI_Controller {
         
         $id_surat = $this->input->post('id_surat');
         $nim = $this->input->post('nim');
-        $email = $this->input->post('email');
-        $no_wa = $this->input->post('no_wa');
         $tanggal = $this->input->post('tanggal');
 
 
@@ -108,8 +102,6 @@ class C_SuratBebas extends CI_Controller {
 
             'id_surat' => $id_surat,
             'nim' => $nim,
-            'email' => $email,
-            'no_wa' => $no_wa,
             'tanggal' => $tanggal
         );
 

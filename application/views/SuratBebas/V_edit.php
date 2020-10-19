@@ -39,17 +39,6 @@
                     </div>
 
 
-                    <div class="form-group">
-                        <label for="">E-Mail</label>
-                        <input type="Text" name="email" class="form-control"
-                        value="<?php echo $row->email;?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Nomor WhatsApp</label>
-                        <input type="Text" name="no_wa" class="form-control"
-                        value="<?php echo $row->no_wa;?>">
-                    </div>
 
                     <div class="form-group">
                         <?php
