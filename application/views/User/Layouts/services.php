@@ -9,7 +9,7 @@
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                        <a href="<?php echo base_url()?>User/C_SuratBebas">
+                        <a href="<?php echo base_url()?>User/C_PinjamRuang">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop-house fa-stack-1x fa-inverse"></i>
                         </a>

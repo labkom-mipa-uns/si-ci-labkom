@@ -21,6 +21,14 @@ class M_PinjamRuang extends CI_Model {
             return $query;
     }
 
+    public function get_id()
+    {
+        $insert_id = $this->db->insert_id();
+        return $insert_id;
+    }
+
+
+
     public function get_details($where,$table){
         $this->db->select('*');
         $this->db->join('mahasiswa','mahasiswa.nim = peminjaman_ruang.nim','LEFT');

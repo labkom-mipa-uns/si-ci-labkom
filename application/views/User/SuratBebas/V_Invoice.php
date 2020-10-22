@@ -59,19 +59,6 @@
 
 
                     
-                    <!-- <tr >
-                              <td></td>
-                              <td>
-                              <?php foreach ($surat as $row) { ?>
-                              
-                              <ul>
-
-                              
-                              </ul>
-                              <?php } ?>
-                              </td>
-                              <td></td>
-                    </tr> -->
               </table>
                             <div align="center" class="mt-5 ">     
                               <?php echo anchor('C_SuratBebas/word/'.$row->id_surat,'<div class="btn btn-primary btn-sm">DOWNLOAD DOKUMEN</div>') ?>
