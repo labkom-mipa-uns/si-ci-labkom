@@ -21,7 +21,7 @@
 
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                        <a href="">
+                        <a href="<?php echo base_url()?>User/C_PinjamAlat">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fas fa-toolbox fa-stack-1x fa-inverse"></i>
                         </a>

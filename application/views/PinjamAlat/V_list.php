@@ -155,8 +155,8 @@
             <label > Status </label>
             <?php
             $options = array(
-              'belum lunas'           => 'Belum lunas',
-              'lunas'                 => 'Lunas'
+              'Belum lunas'           => 'Belum lunas',
+              'Lunas'                 => 'Lunas'
             );
             echo form_dropdown('status', $options, '', 'class="form-control"');
             
