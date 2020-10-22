@@ -107,6 +107,7 @@ class C_Mhs extends CI_Controller {
         $nim = $this->input->post('nim');
         $nama_lengkap = $this->input->post('nama_lengkap');
         $prodi = $this->input->post('prodi');
+        $angkatan = $this->input->post('angkatan');
         $no_wa = $this->input->post('no_wa');
         $email = $this->input->post('email');
 
@@ -117,9 +118,9 @@ class C_Mhs extends CI_Controller {
             'nim' => $nim,
             'nama_lengkap' => $nama_lengkap,
             'prodi' => $prodi,
+            'angkatan' => $angkatan,
             'no_wa' => $no_wa,
             'email' => $email
-
         );
 
         $where = array (

@@ -36,5 +36,19 @@ class M_Mhs extends CI_Model {
         $this->db->update($table,$data);
     }
 
+    
+
+    public function check_data($nim)
+    {
+        $this->db->where('nim',$nim);
+        $query = $this->db->get('mahasiswa');
+        if ($query->num_rows() > 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+    }
+
 
 } 

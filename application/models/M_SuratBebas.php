@@ -22,6 +22,13 @@ class M_SuratBebas extends CI_Model {
     public function insert_entry($data)
     {
         $this->db->insert('surat_bebas_labkom',$data);
+
+    }
+
+    public function get_id()
+    {
+        $insert_id = $this->db->insert_id();
+        return $insert_id;
     }
 
     //Fungsi untuk hapus data
