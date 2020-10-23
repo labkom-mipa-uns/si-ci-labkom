@@ -42,7 +42,6 @@
                       );
                       echo form_dropdown('prodi', $option, '', 'class="form-control"');
                     ?>
-                    <br>
                 </div>
 
                 <div class="form-group">
