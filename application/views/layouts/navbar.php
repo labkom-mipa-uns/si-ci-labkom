@@ -11,9 +11,21 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?php echo base_url()?>Dashboard/admin" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
+
+      <ul class="navbar-nav ml-auto">
+    <!-- SEARCH FORM -->
+    <form method="get" action="<?php echo base_url() ?>C_Search/search/nim" class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        
+        <input class="form-control form-control-navbar" type="text" name="nim" placeholder="Cari Nomer Induk Mahasiswa" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
     </ul>
+
   </nav>
   <!-- /.navbar -->
