@@ -53,11 +53,11 @@ class C_PinjamRuang extends CI_Controller {
          
                 $data['pagination'] = $this->pagination->create_links();
 
-                $this->load->view('layouts/header');
-                $this->load->view('layouts/navbar');
-                $this->load->view('layouts/sidebar');
-                $this->load->view('PinjamRuang/V_List',$data);
-                $this->load->view('layouts/footer');  
+                $this->load->view('Layouts/header');
+                $this->load->view('Layouts/navbar');
+                $this->load->view('Layouts/sidebar');
+                $this->load->view('PinjamRuang/V_list',$data);
+                $this->load->view('Layouts/footer');  
     }
 
     public function insert_entry(){
@@ -93,11 +93,11 @@ class C_PinjamRuang extends CI_Controller {
 
         $where = array('id_pinjam_ruang'=>$id_pinjam_ruang);
         $data['p_ruang'] = $this->M_PinjamRuang->edit_data($where,'peminjaman_ruang')->result();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
         $this->load->view('PinjamRuang/V_edit',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/footer');
     }
 
     public function update(){
@@ -134,11 +134,11 @@ class C_PinjamRuang extends CI_Controller {
 
             $where = array('id_pinjam_ruang'=>$id_pinjam_ruang);
             $data['p_ruang'] = $this->M_PinjamRuang->get_details($where,'peminjaman_ruang')->result();
-            $this->load->view('layouts/header');
-            $this->load->view('layouts/navbar');
-            $this->load->view('layouts/sidebar');
+            $this->load->view('Layouts/header');
+            $this->load->view('Layouts/navbar');
+            $this->load->view('Layouts/sidebar');
             $this->load->view('PinjamRuang/V_details',$data);
-            $this->load->view('layouts/footer');
+            $this->load->view('Layouts/footer');
     
         }
 

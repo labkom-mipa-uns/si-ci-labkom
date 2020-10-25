@@ -12,7 +12,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>User/C_User/services">Pelayanan</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Tentang</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Kontak</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url() ?>Dashboard">Admin</a></li>
                     </ul>
                 </div>
             </div>

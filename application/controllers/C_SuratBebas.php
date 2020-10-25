@@ -53,11 +53,11 @@ class C_SuratBebas extends CI_Controller {
          
                 $data['pagination'] = $this->pagination->create_links();
 
-                $this->load->view('layouts/header');
-                $this->load->view('layouts/navbar');
-                $this->load->view('layouts/sidebar');
-                $this->load->view('SuratBebas/V_List',$data);
-                $this->load->view('layouts/footer');  
+                $this->load->view('Layouts/header');
+                $this->load->view('Layouts/navbar');
+                $this->load->view('Layouts/sidebar');
+                $this->load->view('SuratBebas/V_list',$data);
+                $this->load->view('Layouts/footer');  
     }
 
     public function insert_entry(){
@@ -84,11 +84,11 @@ class C_SuratBebas extends CI_Controller {
 
         $where = array('id_surat'=>$id_surat);
         $data['surat'] = $this->M_SuratBebas->edit_data($where,'surat_bebas_labkom')->result();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
         $this->load->view('SuratBebas/V_edit',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/footer');
     }
 
     public function update(){
@@ -117,11 +117,11 @@ class C_SuratBebas extends CI_Controller {
 
         $where = array('id_surat'=>$id_surat);
         $data['surat'] = $this->M_SuratBebas->get_details($where,'surat_bebas_labkom')->result();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
         $this->load->view('SuratBebas/V_details',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/footer');
 
     }
 

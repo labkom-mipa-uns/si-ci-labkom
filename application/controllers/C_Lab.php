@@ -7,11 +7,11 @@ class C_Lab extends CI_Controller {
     public function index(){
         $this->load->model('M_Lab');
         $data['lab']=$this->M_Lab->get_data();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
-        $this->load->view('lab/V_List',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
+        $this->load->view('Lab/V_list',$data);
+        $this->load->view('Layouts/footer');
     }
 
     public function insert_entry(){
@@ -38,11 +38,11 @@ class C_Lab extends CI_Controller {
 
         $where = array('id_lab'=>$id_lab);
         $data['lab'] = $this->M_Lab->edit_data($where,'lab')->result();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
-        $this->load->view('lab/V_edit',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
+        $this->load->view('Lab/V_edit',$data);
+        $this->load->view('Layouts/footer');
     }
 
     public function update(){

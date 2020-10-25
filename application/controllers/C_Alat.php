@@ -50,11 +50,11 @@ class C_Alat extends CI_Controller {
  
         $data['pagination'] = $this->pagination->create_links();
 
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
-        $this->load->view('Alat/V_List',$data);
-        $this->load->view('layouts/footer');  
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
+        $this->load->view('Alat/V_list',$data);
+        $this->load->view('Layouts/footer');  
 }
 
     public function insert_entry(){
@@ -84,11 +84,11 @@ class C_Alat extends CI_Controller {
 
         $where = array('id_alat'=>$id_alat);
         $data['alat'] = $this->M_Alat->edit_data($where,'alat')->result();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
-        $this->load->view('alat/V_edit',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
+        $this->load->view('Alat/V_edit',$data);
+        $this->load->view('Layouts/footer');
     }
 
     public function update(){
