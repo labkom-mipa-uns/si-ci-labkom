@@ -17,9 +17,18 @@ class C_User extends CI_Controller {
 
         $this->load->view('User/Layouts/header');
         $this->load->view('User/Layouts/navbar');
-        $this->load->view('User/Layouts/services');
+        $this->load->view('User/Services/services');
         $this->load->view('User/Layouts/footer');  
     }
+
+    public function kontak(){
+
+        $this->load->view('User/Layouts/header');
+        $this->load->view('User/Layouts/navbar');
+        $this->load->view('User/Kontak/kontak');
+        $this->load->view('User/Layouts/footer');  
+    }
+
     
 
 

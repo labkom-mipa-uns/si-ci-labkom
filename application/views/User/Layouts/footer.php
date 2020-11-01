@@ -22,6 +22,7 @@
         <script src="<?php echo base_url() ?>assets/user/dist/assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="<?php echo base_url() ?>assets/user/dist/js/scripts.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     </body>
 </html>
 
