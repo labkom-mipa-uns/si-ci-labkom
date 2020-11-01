@@ -5,7 +5,7 @@
               <div class="card-body">
               <h3 class="mb-5" align="center"> Details Peminjaman Alat </h3>
               <div class="table-responsive">
-              <table class="table table-responsive table-striped mx-auto " >     
+              <table class="table table-striped mx-auto " >     
 
                     <tr>
                             <td>ID Peminjaman Alat </td>

@@ -38,11 +38,6 @@ class C_PinjamRuang extends CI_Controller {
                 'angkatan' => $angkatan,
                 'no_wa' => $no_wa,
                 'email' => $email,
-                'tanggal' => $tanggal,
-                'id_lab' => $id_lab,
-                'jam_pinjam' => $jam_pinjam,
-                'jam_kembali' => $jam_kembali,
-                'keperluan' => $keperluan
             );
 
             $data1 = array(

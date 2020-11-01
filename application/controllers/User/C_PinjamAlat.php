@@ -28,7 +28,10 @@ class C_PinjamAlat extends CI_Controller {
         $id_alat = $this->input->post('id_alat');
         
         //Jumlah Hari
+        
         $diff = abs(strtotime($tanggal_kembali) - strtotime($tanggal_pinjam));
+        $years = floor($diff / (365*60*60*24));
+        $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
         $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
 
         if($days==0){
@@ -55,15 +58,6 @@ class C_PinjamAlat extends CI_Controller {
                 'angkatan' => $angkatan,
                 'no_wa' => $no_wa,
                 'email' => $email,
-                'tanggal_pinjam' => $tanggal_pinjam,
-                'tanggal_kembali' => $tanggal_kembali,
-                'jam' => $jam,
-                'tempat' => $tempat,
-                'id_alat' => $id_alat,
-                'jumlah_alat' => $jumlah_alat,
-                'total_harga' => $total_harga,
-                'keperluan' => $keperluan,
-                'status' => $status
     
             );
 

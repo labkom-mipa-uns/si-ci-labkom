@@ -5,8 +5,8 @@
               <div class="card-body">
               <h3 class="mb-5" align="center"> Details Pengajuan Surat Bebas Labkom</h3>
               <div class="table-responsive">
-              <table class="table table-striped mx-auto "  >     
-
+              <table align ="center" class="table table-striped mx-auto  "  >     
+                
                     <tr>
                             <td>ID Surat  </td>
                             <?php foreach ($surat as $row) { ?>
