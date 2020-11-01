@@ -1,21 +1,18 @@
         <!-- Contact -->
-        <section  id="services" class="mt">
+        <section  id="" class="page-section">
         <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-12">
-                        <h1 class="h2 mt-4" style="margin-top:-2%">
-                            Kontak Kami
-                        </h1>
-                    </div>
-            </div>
+
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase mb-3">Kontak </h2>  
+                </div>
         </div>
         <div class="container mt-4">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="well">
                         <h3 style="line-height:20%;"><i class="fa fa-home fa-1x" style="line-height:6%;color:#2793ff"></i> Alamat :</h3>               
-                        <p style="margin-top:6%;line-height:35%">Ruang Pengelola Labkom, Lt2 </p>
-                        <p style="margin-top:6%;line-height:35%"> Gedung A FMIPA UNS</p>
+                        <p style="margin-top:6%;line-height:35%">Ruang Pengelola Labkom, </p>
+                        <p style="margin-top:6%;line-height:35%">Lantai 2, Gedung A FMIPA UNS</p>
                         <p style="margin-top:6%;line-height:35%">Jl. Ir. Sutami No.36, </p>
                         <p style="margin-top:6%;line-height:35%">Kentingan, Kec. Jebres, </p>
                         <p style="margin-top:6%;line-height:35%">Kota Surakarta, Jawa Tengah 57126</p>

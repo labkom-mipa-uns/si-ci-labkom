@@ -29,9 +29,13 @@ class C_User extends CI_Controller {
         $this->load->view('User/Layouts/footer');  
     }
 
+    public function tentang(){
+
+        $this->load->view('User/Layouts/header');
+        $this->load->view('User/Layouts/navbar');
+        $this->load->view('User/Tentang/tentang');
+        $this->load->view('User/Layouts/footer');  
+    }
     
-
-
-
 
 }
