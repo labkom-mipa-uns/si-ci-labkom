@@ -55,11 +55,11 @@ class C_Mhs extends CI_Controller {
          
                 $data['pagination'] = $this->pagination->create_links();
 
-                $this->load->view('layouts/header');
-                $this->load->view('layouts/navbar');
-                $this->load->view('layouts/sidebar');
-                $this->load->view('Mhs/V_List',$data);
-                $this->load->view('layouts/footer');  
+                $this->load->view('Layouts/header');
+                $this->load->view('Layouts/navbar');
+                $this->load->view('Layouts/sidebar');
+                $this->load->view('Mhs/V_list',$data);
+                $this->load->view('Layouts/footer');  
     }
 
     public function insert_entry(){
@@ -95,11 +95,11 @@ class C_Mhs extends CI_Controller {
 
         $where = array('nim'=>$nim);
         $data['mhs'] = $this->M_Mhs->edit_data($where,'mahasiswa')->result();
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/navbar');
-        $this->load->view('layouts/sidebar');
-        $this->load->view('mhs/V_edit',$data);
-        $this->load->view('layouts/footer');
+        $this->load->view('Layouts/header');
+        $this->load->view('Layouts/navbar');
+        $this->load->view('Layouts/sidebar');
+        $this->load->view('Mhs/V_edit',$data);
+        $this->load->view('Layouts/footer');
     }
 
     public function update(){
@@ -107,6 +107,7 @@ class C_Mhs extends CI_Controller {
         $nim = $this->input->post('nim');
         $nama_lengkap = $this->input->post('nama_lengkap');
         $prodi = $this->input->post('prodi');
+        $angkatan = $this->input->post('angkatan');
         $no_wa = $this->input->post('no_wa');
         $email = $this->input->post('email');
 
@@ -117,9 +118,9 @@ class C_Mhs extends CI_Controller {
             'nim' => $nim,
             'nama_lengkap' => $nama_lengkap,
             'prodi' => $prodi,
+            'angkatan' => $angkatan,
             'no_wa' => $no_wa,
             'email' => $email
-
         );
 
         $where = array (
