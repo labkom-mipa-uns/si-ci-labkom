@@ -11,6 +11,7 @@
                         <div class="form-group col-md-6">
                         <label>NIM</label>
                         <input type="text" name="nim" class="form-control"  placeholder="contoh M311xxxx">
+
                         </div>
                         <div class="form-group col-md-6">
                         <label >Nama Lengkap</label>
@@ -100,3 +101,5 @@
                 </form>
                 </div>
         </section> 
+
+
