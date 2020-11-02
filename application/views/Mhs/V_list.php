@@ -126,8 +126,28 @@
 
 
         <div class="form-group">
-            <label > Program Studi</label>
-            <input type="text" name="prodi" class="form-control">
+        <label>Program  Studi</label>
+                                <?php  
+                                            $option = array(
+
+                                                    'D3-Farmasi' => 'D3-Farmasi',
+                                                    'D3-Teknik Informatika' => 'D3-Teknik Informatika',
+                                                    'S1-Matematika' => 'S1-Matematika',
+                                                    'S1-Fisika' => 'S1-Fisika',
+                                                    'S1-Informatika' => 'S1-Informatika',
+                                                    'S1-Statistika' => 'S1-Statistika',
+                                                    'S1-Informatika' => 'S1-Informatika',
+                                                    'S1-Biologi' => 'S1-Biologi',
+                                                    'S1-Farmasi' => 'S1-Farmasi',
+                                                    'S1-Kimia' => 'S1-Kimia',
+                                                    'S1-Ilmu Lingkungan' => 'S1-Ilmu Lingkungan',
+                                                    'S2-Fisika' => 'S2-Fisika',
+                                                    'S2-Biosains' => 'S2-Biosains',
+                                                    'S2-Kimia' => 'S2-Kimia'
+
+                                            );
+                                            echo form_dropdown('prodi', $option, '', 'class="form-control "');
+                                            ?>
         </div> 
 
 

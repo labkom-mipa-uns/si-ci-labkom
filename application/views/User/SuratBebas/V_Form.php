@@ -28,7 +28,7 @@
                                 <?php  
                                             $option = array(
 
-                                                    'D3-Kimia' => 'D3-Kimia',
+                                                    'D3-Farmasi' => 'D3-Farmasi',
                                                     'D3-Teknik Informatika' => 'D3-Teknik Informatika',
                                                     'S1-Matematika' => 'S1-Matematika',
                                                     'S1-Fisika' => 'S1-Fisika',
