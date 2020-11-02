@@ -1,5 +1,5 @@
         <section class="page-section" >
-            <div class="container">
+            <div class="container mt-4">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Formulir Peminjaman Alat  </h2>
                     <h3 class="section-subheading text-muted">Laboratorium  FMIPA UNS</h3>

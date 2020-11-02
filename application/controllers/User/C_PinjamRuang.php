@@ -8,9 +8,18 @@ class C_PinjamRuang extends CI_Controller {
         $this->load->view('User/Layouts/header');
         $this->load->view('User/Layouts/navbar');
         $this->load->view('User/PinjamRuang/V_Tahapan');
+        $this->load->view('User/Layouts/footer');  
+    }
+
+
+    public function forms(){
+
+        $this->load->view('User/Layouts/header');
+        $this->load->view('User/Layouts/navbar');
         $this->load->view('User/PinjamRuang/V_Form');
         $this->load->view('User/Layouts/footer');  
     }
+
 
 
     public function insert_entry(){

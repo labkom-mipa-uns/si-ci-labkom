@@ -8,8 +8,15 @@ class C_SuratBebas extends CI_Controller {
         $this->load->view('User/Layouts/header');
         $this->load->view('User/Layouts/navbar');
         $this->load->view('User/SuratBebas/V_Tahapan');
+        $this->load->view('User/Layouts/footer');  
+    }
+
+    public function forms(){
+        $this->load->view('User/Layouts/header');
+        $this->load->view('User/Layouts/navbar');
         $this->load->view('User/SuratBebas/V_Form');
         $this->load->view('User/Layouts/footer');  
+
     }
 
 

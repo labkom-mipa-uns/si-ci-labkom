@@ -8,9 +8,17 @@ class C_PinjamAlat extends CI_Controller {
         $this->load->view('User/Layouts/header');
         $this->load->view('User/Layouts/navbar');
         $this->load->view('User/PinjamAlat/V_Tahapan');
+        $this->load->view('User/Layouts/footer');  
+    }
+
+    public function forms(){
+
+        $this->load->view('User/Layouts/header');
+        $this->load->view('User/Layouts/navbar');
         $this->load->view('User/PinjamAlat/V_Form');
         $this->load->view('User/Layouts/footer');  
     }
+
 
 
     public function insert_entry(){

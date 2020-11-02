@@ -12,7 +12,7 @@
                             <div class="timeline-heading">
                                 <h4>Mengisi Data Diri</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Mengisi data diri pada untuk pembuatan Surat Bebas Lab di halaman ini</p></div>
+                            <div class="timeline-body"><p class="text-muted">Mengisi data diri pada untuk pembuatan Surat Bebas Lab di halaman berikut <a href="<?php echo base_url()?>/User/C_SuratBebas/forms" target="_blank">Formulir Surat Bebas</a></p></div>
                         </div>
                     </li>
 
@@ -20,51 +20,32 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url() ?>assets/user/dist/assets/img/about/2.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>Download File Surat</h4>
+                                <h4>Konfirmasi Pengajuan Surat Bebas Labkom</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Setelah Selesai Mengisi data diri lalu, akan muncul halaman untuk download beserta keterangan orang yang mengajukan surat</p></div>
+                            <div class="timeline-body"><p class="text-muted">Konfirmasi dilakukan setelah pengisian formulir selesai, akan muncul halaman dengan pilihan tombol "Konfirmasi" </p></div>
                         </div>
                     </li>
 
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url() ?>assets/user/dist/assets/img/about/3.jpg" alt="" /></div>
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Cetak Surat Bebas Lab</h4>
+                        <div class="timeline-heading">
+                                <h4>Menunggu Pemrosesan Dokumen </h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Cetak dokumen surat bebas lab dengan kertas A4</p></div>
+                            <div class="timeline-body"><p class="text-muted">Tunggu hingga kami mengirimkan dokumen surat bebas labkom yang sudah diproses </i></b></p></div>
                         </div>
                     </li>
 
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url() ?>assets/user/dist/assets/img/about/4.jpg" alt="" /></div>
                         <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Ajukan ke Lab FMIPA UNS</h4>
+                        <div class="timeline-heading">
+                                <h4>Cetak & Simpan Dokumen  </h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Bawalah dokumen yang sudah tercetak itu ke ruang Pengelola Lab Gedung A Lantai 2 FMIPA UNS, dan letakan di keranjang surat bagian yang tertulis "BELUM TTD"</p></div>
+                            <div class="timeline-body"><p class="text-muted">Cetak dokumen dengan kertas ukuran A4 lalu Simpan dokumen yang sudah dicetak tersebut </p></div>
                         </div>
                     </li>
 
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url() ?>assets/user/dist/assets/img/about/5.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Hubungi Assisten Lab FMIPA </h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Hubungi Assiten Lab dengan nomor yang tertera di Kontak </p></div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url() ?>assets/user/dist/assets/img/about/6.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Ambil Surat Bebas Lab</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Proses tanda tangan Surat Bebas Lab paling lambat 7 Hari, tunggu hingga dihubungi oleh Asisten kami :)</p></div>
-                        </div>
-                    </li>
 
                     <li class="timeline-inverted">
                         <div class="timeline-image">
