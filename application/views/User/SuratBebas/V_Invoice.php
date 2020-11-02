@@ -62,7 +62,7 @@
                     
               </table>
                             <div align="center" class="mt-5 ">     
-                              <?php echo anchor('C_SuratBebas/word/'.$row->id_surat,'<div class="btn btn-primary btn-sm">DOWNLOAD DOKUMEN</div>') ?>
+                              <?php echo anchor('https://wa.me/+6285331318280?text='.$row->nim.'_Konfirmasi_PengajuanSuratBebasLab_'.$row->prodi,'<div class="btn btn-success btn">Konfirmasi Pengajuan Surat</div>') ?>
                             </div>
                     
               </div>
