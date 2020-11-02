@@ -45,7 +45,8 @@
                         value="<?php echo $row->harga;?>">
                     </div>
 
-                    
+                    <button class="btn btn-primary btn" onclick="goBack()">Kembali</button>
+
                     <button type="reset" class="btn btn-danger">Reset</button>
                     <button type="submit" class="btn btn-primary">Simpan Data</button>
 
@@ -53,4 +54,11 @@
 
                   <?php } ?>
     </section>
+
+                      <script>
+                         function goBack() {
+                         window.history.back();
+                         }
+                     </script>
+
 </div>
