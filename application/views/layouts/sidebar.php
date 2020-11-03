@@ -76,6 +76,16 @@
              </a>
          </li>
 
+         <li class="nav-item bg-blue">
+             <a href="<?php echo base_url()?>Login/logout" class="nav-link" >
+             <i class="nav-icon fas fa-sign-out-alt"></i>               
+              <p>
+                 Log Out
+               </p>
+             </a>
+         </li>
+
+
 
 
 
