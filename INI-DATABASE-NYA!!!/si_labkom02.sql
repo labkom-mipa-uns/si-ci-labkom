@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2020 at 03:37 AM
+-- Generation Time: Nov 03, 2020 at 05:09 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -83,7 +83,7 @@ CREATE TABLE `peminjaman_alat` (
   `nim` varchar(8) NOT NULL,
   `tanggal_pinjam` date NOT NULL,
   `tanggal_kembali` date NOT NULL,
-  `jam` time NOT NULL DEFAULT current_timestamp(),
+  `jam` time NOT NULL,
   `tempat` varchar(100) NOT NULL,
   `id_alat` varchar(20) NOT NULL,
   `jumlah_alat` int(10) NOT NULL,
