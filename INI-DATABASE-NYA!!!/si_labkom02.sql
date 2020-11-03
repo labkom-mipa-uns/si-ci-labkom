@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2020 at 08:33 AM
+-- Generation Time: Nov 03, 2020 at 03:37 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -68,16 +68,9 @@ CREATE TABLE `mahasiswa` (
   `nama_lengkap` varchar(255) NOT NULL,
   `angkatan` varchar(8) NOT NULL,
   `prodi` varchar(100) NOT NULL,
-  `no_wa` int(20) NOT NULL,
+  `no_wa` varchar(20) NOT NULL,
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `mahasiswa`
---
-
-INSERT INTO `mahasiswa` (`nim`, `nama_lengkap`, `angkatan`, `prodi`, `no_wa`, `email`) VALUES
-('M3118035', 'Hanif Fauzi Hakim', '2018', 'D3-Teknik Informatika ', 2147483647, 'haniffauzihakim4049@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -115,13 +108,6 @@ CREATE TABLE `peminjaman_ruang` (
   `keperluan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `peminjaman_ruang`
---
-
-INSERT INTO `peminjaman_ruang` (`id_pinjam_ruang`, `nim`, `tanggal`, `jam_pinjam`, `jam_kembali`, `id_lab`, `keperluan`) VALUES
-(1, 'M3118035', '2020-10-11', '14:30:00', '19:30:00', 'LAB.MIKRO', 'Pinjam Saja');
-
 -- --------------------------------------------------------
 
 --
@@ -134,23 +120,15 @@ CREATE TABLE `surat_bebas_labkom` (
   `tanggal` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `surat_bebas_labkom`
---
-
-INSERT INTO `surat_bebas_labkom` (`id_surat`, `nim`, `tanggal`) VALUES
-(2, 'M3118035', '19 Oktober 2020');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `user_admin`
 --
 
-CREATE TABLE `user` (
-  `id_user` varchar(8) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+CREATE TABLE `user_admin` (
+  `id_admin` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -199,10 +177,10 @@ ALTER TABLE `surat_bebas_labkom`
   ADD KEY `nim` (`nim`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `user_admin`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+ALTER TABLE `user_admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -218,13 +196,13 @@ ALTER TABLE `peminjaman_alat`
 -- AUTO_INCREMENT for table `peminjaman_ruang`
 --
 ALTER TABLE `peminjaman_ruang`
-  MODIFY `id_pinjam_ruang` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pinjam_ruang` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `surat_bebas_labkom`
 --
 ALTER TABLE `surat_bebas_labkom`
-  MODIFY `id_surat` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_surat` int(8) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
